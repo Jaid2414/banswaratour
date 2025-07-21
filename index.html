@@ -2,142 +2,306 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-key="pageTitle">Explore Southern Rajasthan: Banswara & Dungarpur</title>
-    <link rel="stylesheet" href="style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Southern Rajasthan: Banswara & Dungarpur</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #5c6bc0, #8e24aa);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .btn-hero {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: white;
+      color: #5c6bc0;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn-hero:hover {
+      background: #eee;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      background: #333;
+      padding: 10px;
+      list-style: none;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    nav li {
+      margin: 5px 15px;
+    }
+
+    nav a,
+    .lang-btn {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    nav a:hover,
+    .lang-btn:hover {
+      color: #ffcc80;
+    }
+
+    .lang-btn.active {
+      border-bottom: 2px solid #ffcc80;
+    }
+
+    .place-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .place-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .place-card:hover {
+      transform: scale(1.02);
+    }
+
+    .place-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .place-card img:hover {
+      transform: scale(1.05);
+    }
+
+    .place-card h3 {
+      margin: 16px;
+      font-size: 1.4rem;
+      color: #333;
+    }
+
+    .place-card p {
+      margin: 0 16px 10px;
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    .learn-more-btn {
+      display: inline-block;
+      margin: 0 16px 16px;
+      padding: 10px 16px;
+      background: #5c6bc0;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .learn-more-btn:hover {
+      background: #3949ab;
+    }
+
+    #info {
+      background: #fffbe6;
+      padding: 20px;
+      margin: 20px;
+      border-left: 5px solid #ffa726;
+      font-size: 1rem;
+      display: none;
+    }
+
+    #info.active {
+      display: block;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .dark-mode {
+      background: #121212;
+      color: #f1f1f1;
+    }
+
+    .dark-mode header {
+      background: linear-gradient(to right, #2c2c54, #5758bb);
+    }
+
+    .dark-mode .place-card {
+      background: #1f1f1f;
+      color: #f1f1f1;
+    }
+
+    .dark-mode .learn-more-btn {
+      background: #333;
+    }
+
+    .dark-mode #info {
+      background: #2a2a2a;
+      color: #f1f1f1;
+    }
+
+    .dark-mode input,
+    .dark-mode textarea {
+      background: #333;
+      color: #f1f1f1;
+      border: 1px solid #444;
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <div class="hero-content">
-            <h1 data-key="heroHeading">Discover the Charms of Banswara & Dungarpur</h1>
-            <p data-key="heroSubheading">Unveiling the Hidden Gems of Southern Rajasthan, India</p>
-            <a href="#banswara" class="btn-hero" data-key="startExploringBtn">Start Exploring</a>
+  <header>
+    <div class="hero-content">
+      <h1>Discover the Charms of Banswara & Dungarpur</h1>
+      <p>Unveiling the Hidden Gems of Southern Rajasthan, India</p>
+      <a href="#banswara" class="btn-hero">Start Exploring</a>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#banswara" onclick="showBanswara()">Banswara</a></li>
+      <li><a href="#dungarpur" onclick="showDungarpur()">Dungarpur</a></li>
+      <li><a href="#review-section">Reviews</a></li>
+      <li><button onclick="toggleTheme()" class="lang-btn">🌓 Toggle Theme</button></li>
+    </ul>
+  </nav>
+
+  <div id="info"></div>
+
+  <section id="banswara" class="tourist-section">
+    <h2 style="text-align:center;">Banswara - The City of Hundred Islands</h2>
+    <div class="place-grid">
+      <div class="place-card">
+        <img src="Mahi_Bajaj_Sagar_Dam.jpg" alt="Mahi Bajaj Sagar Dam" />
+        <h3>Mahi Bajaj Sagar Dam</h3>
+        <p>A colossal dam on the Mahi River with breathtaking views and picnic spots.</p>
+        <a class="learn-more-btn"
+          href="https://wa.me/?text=Check out Mahi Bajaj Sagar Dam: https://yourwebsite.com/mahi_bajaj_sagar_dam.html"
+          target="_blank">📲 Share on WhatsApp</a>
+        <div style="margin: 10px 16px;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3709.512420453119!2d74.462901!3d23.497181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967417be6b83e2f%3A0xf388fc81b8e32a07!2sMahi%20Bajaj%20Sagar%20Dam!5e0!3m2!1sen!2sin!4v1710000000000"
+            width="100%" height="200" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
         </div>
-    </header>
+        <a href="mahi_bajaj_sagar_dam.html" class="learn-more-btn">Explore More</a>
+      </div>
+      <!-- Repeat similar cards for other places with their respective map links and content -->
+    </div>
+  </section>
 
-    <nav>
-        <ul>
-            <li><a href="#banswara" class="nav-btn" onclick="showBanswara()" data-key="navBanswara">Banswara</a></li>
-            <li><a href="#dungarpur" class="nav-btn" onclick="showDungarpur()" data-key="navDungarpur">Dungarpur</a>
-            </li>
-            <li><a href="#contact" data-key="navContact">Contact Us</a></li>
-            <li class="language-switcher">
+  <section id="dungarpur" class="tourist-section">
+    <h2 style="text-align:center;">Dungarpur - The City of Hills</h2>
+    <div class="place-grid">
+      <!-- Add Dungarpur places here -->
+    </div>
+  </section>
 
-            </li>
-        </ul>
-    </nav>
+  <section id="review-section" style="padding: 40px; background: #fff;">
+    <h2 style="text-align: center;">Leave a Review</h2>
+    <form style="max-width: 500px; margin: auto;" onsubmit="submitReview(event)">
+      <input type="text" placeholder="Your Name" id="reviewer" required
+        style="width: 100%; padding: 10px; margin: 10px 0;" />
+      <textarea placeholder="Your Experience..." id="feedback" required
+        style="width: 100%; padding: 10px; margin: 10px 0;"></textarea>
+      <button type="submit" class="learn-more-btn">Submit</button>
+    </form>
+    <div id="reviews" style="margin-top: 30px; max-width: 600px; margin: 30px auto;"></div>
+  </section>
 
-    <main>
-        <div id="info"></div>
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+    }
 
-        <section id="banswara" class="tourist-section">
-            <h2 class="section-title" data-key="banswaraSectionTitle">Banswara - The City of Hundred Islands</h2>
-            <div class="place-grid">
-                <div class="place-card">
-                    <img src="Mahi_Bajaj_Sagar_Dam.jpg" alt="Mahi Bajaj Sagar Dam">
-                    <h3 data-key="mahiDamTitle">Mahi Bajaj Sagar Dam</h3>
-                    <p data-key="mahiDamDesc">A colossal dam on the Mahi River, offering breathtaking panoramic views
-                        and serene picnic spots. It's truly a sight to behold, surrounded by picturesque small islands.
+    function showBanswara() {
+      const infoDiv = document.getElementById('info');
+      infoDiv.innerHTML = `
+        <h2>Banswara Tourist Places</h2>
+        <p><strong>Mahi Bajaj Sagar Dam:</strong> A dam with scenic views.</p>
+        <p><strong>Anand Sagar Lake:</strong> A tranquil lake ideal for boating.</p>
+        <p><strong>Abdullah Pir Dargah:</strong> A peaceful dargah with Urs fair.</p>
+      `;
+      infoDiv.classList.add('active');
+    }
 
+    function showDungarpur() {
+      const infoDiv = document.getElementById('info');
+      infoDiv.innerHTML = `
+        <h2>Dungarpur Tourist Places</h2>
+        <p><strong>Juna Mahal:</strong> 13th-century palace with frescoes.</p>
+        <p><strong>Gaib Sagar Lake:</strong> Lake with temple, perfect for walks.</p>
+        <p><strong>Deo Somnath Temple:</strong> Shiva temple from 12th century.</p>
+      `;
+      infoDiv.classList.add('active');
+    }
 
-                    </p>
-                    <a href="mahi_bajaj_sagar_dam.html" class="learn-more-btn" data-key="exploreMoreBtn">Explore
-                        More</a>
-                </div>
-                <div class="place-card">
-                    <img src="anand-sagar-lake3.jpg" alt="Anand Sagar Lake">
-                    <h3 data-key="anandSagarTitle">Anand Sagar Lake (Bai Talab)</h3>
-                    <p data-key="anandSagarDesc">A captivating artificial lake near the city, ideal for tranquil boating
-                        and enjoying magnificent sunsets. Its banks are adorned with historic cenotaphs of past rulers.
-                    </p>
-                    <a href="anand_sagar.html" class="learn-more-btn" data-key="exploreMoreBtn">Explore
-                        More</a>
-                </div>
-                <div class="place-card">
-                    <img src="Abdullah-Pir-in-Banswara.jpg" alt="Abdullah Pir Dargah">
-                    <h3 data-key="abdullahPirTitle">Abdullah Pir Dargah</h3>
-                    <p data-key="abdullahPirDesc">A revered shrine, significant for the Bohra Muslim community, known
-                        for its tranquil atmosphere and annual Urs fair attracting devotees from across the globe.</p>
-                    <a href="abdullah_pir.html" class="learn-more-btn" data-key="exploreMoreBtn">Explore
-                        More</a>
-                </div>
-            </div>
-        </section>
+    function submitReview(e) {
+      e.preventDefault();
+      const name = document.getElementById('reviewer').value;
+      const feedback = document.getElementById('feedback').value;
+      const reviewDiv = document.getElementById('reviews');
 
-        <hr>
-
-        <section id="dungarpur" class="tourist-section">
-            <h2 class="section-title" data-key="dungarpurSectionTitle">Dungarpur - The City of Hills</h2>
-            <div class="place-grid">
-                <div class="place-card">
-                    <img src="26_ind_juna_mahal.jpg" alt="Juna Mahal">
-                    <h3 data-key="junaMahalTitle">Juna Mahal</h3>
-                    <p data-key="junaMahalDesc">A 13th-century palace known for its stunning architecture, intricate
-                        frescoes, and vibrant wall paintings.</p>
-                    <a href="juna_mahal.html" class="learn-more-btn" data-key="exploreMoreBtn">Explore
-                        More
-                </div>
-                <div class="place-card">
-                    <img src="gaib-sagar-lake3.jpg" alt="Gaib Sagar Lake">
-                    <h3 data-key="gaibSagarTitle">Gaib Sagar Lake</h3>
-                    <p data-key="gaibSagarDesc">A serene lake with the famous Vijay Raj Rajeshwar Temple on its banks,
-                        perfect for peaceful walks and spiritual reflection.</p>
-                    <button class="learn-more-btn" data-place="Gaib Sagar Lake" data-key="exploreMoreBtn">Explore
-                        More</button>
-                </div>
-                <div class="place-card">
-                    <img src="deo-somnath1.jpg" alt="Deo Somnath Temple">
-                    <h3 data-key="deoSomnathTitle">Deo Somnath Temple</h3>
-                    <p data-key="deoSomnathDesc">An ancient 12th-century temple dedicated to Lord Shiva, renowned for
-                        its architectural grandeur and historical significance.</p>
-                    <button class="learn-more-btn" data-place="Deo Somnath Temple" data-key="exploreMoreBtn">Explore
-                        More</button>
-                </div>
-            </div>
-        </section>
-<a href="https://wa.me/?text=Check out this place: [URL]" target="_blank">Share on WhatsApp</a>
-    </main>
-
-    <script>
-        function showBanswara() {
-            const infoDiv = document.getElementById('info');
-            infoDiv.innerHTML = `
-                <h2>Banswara Tourist Places</h2>
-                <p><strong>Mahi Bajaj Sagar Dam:</strong> A colossal dam on the Mahi River, offering breathtaking panoramic views and serene picnic spots. It's truly a sight to behold, surrounded by picturesque small islands.</p>
-                <p><strong>Anand Sagar Lake (Bai Talab):</strong> A captivating artificial lake near the city, ideal for tranquil boating and enjoying magnificent sunsets. Its banks are adorned with historic cenotaphs of past rulers.</p>
-                <p><strong>Abdullah Pir Dargah:</strong> A revered shrine, significant for the Bohra Muslim community, known for its tranquil atmosphere and annual Urs fair attracting devotees from across the globe.</p>
-                <p><strong>Tripura Sundari Temple:</strong> A famous temple dedicated to Goddess Tripura Sundari, known for its spiritual significance and architectural beauty.</p>
-            `;
-            infoDiv.classList.add('active');
-        }
-
-        function showDungarpur() {
-            const infoDiv = document.getElementById('info');
-            infoDiv.innerHTML = `
-                <h2>Dungarpur Tourist Places</h2>
-                <p><strong>Juna Mahal:</strong> A 13th-century palace known for its stunning architecture, intricate frescoes, and vibrant wall paintings.</p>
-                <p><strong>Gaib Sagar Lake:</strong> A serene lake with the famous Vijay Raj Rajeshwar Temple on its banks, perfect for peaceful walks and spiritual reflection.</p>
-                <p><strong>Deo Somnath Temple:</strong> An ancient 12th-century temple dedicated to Lord Shiva, renowned for its architectural grandeur and historical significance.</p>
-                <p><strong>Beneshwar Temple:</strong> A significant religious site located at the confluence of Mahi and Som rivers, known for its vibrant fairs.</p>
-            `;
-            infoDiv.classList.add('active');
-        }
-
-        document.getElementById('lang-en').addEventListener('click', () => {
-            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-            document.getElementById('lang-en').classList.add('active');
-        });
-
-        document.getElementById('lang-hi').addEventListener('click', () => {
-            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-            document.getElementById('lang-hi').classList.add('active');
-        });
-    </script>
+      const reviewHTML = `
+        <div style="background:#f3f3f3; padding:10px; margin-bottom:10px; border-left:4px solid #5c6bc0;">
+          <strong>${name}:</strong> <p>${feedback}</p>
+        </div>
+      `;
+      reviewDiv.innerHTML += reviewHTML;
+      document.getElementById('reviewer').value = '';
+      document.getElementById('feedback').value = '';
+    }
+  </script>
 </body>
 
 </html>
