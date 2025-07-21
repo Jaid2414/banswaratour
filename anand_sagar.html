@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anand Sagar Lake - Banswara</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #cfe9ff, #e0f7fa);
+            padding: 20px;
+        }
+
+        .card {
+            max-width: 900px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+        }
+
+        .lang-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .lang-buttons button,
+        .share-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #1e3a8a;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .lang-buttons button:hover,
+        .share-btn:hover {
+            background: #3b82f6;
+        }
+
+        .content {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            color: #333;
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .images img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: zoom-in;
+        }
+
+        .images img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        form button {
+            background: #22c55e;
+        }
+
+        form button:hover {
+            background: #16a34a;
+        }
+
+        .share {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 600px) {
+            .lang-buttons {
+                flex-direction: column;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Anand Sagar Lake - Banswara</h1>
+
+        <!-- Language Buttons -->
+        <div class="lang-buttons">
+            <button onclick="switchLang('hindi')">हिन्दी</button>
+            <button onclick="switchLang('english')">English</button>
+        </div>
+
+        <!-- Hindi Content -->
+        <div id="hindi" class="content">
+            <p>आनंद सागर झील राजस्थान के बांसवाड़ा जिले में स्थित एक प्रसिद्ध पर्यटन स्थल है। इसे 'बाई तालाब' के नाम से
+                भी जाना जाता है। झील के किनारे सुंदर छतरियां और मीनारें स्थित हैं।</p>
+            <h2>कैसे पहुंचें</h2>
+            <p>बांसवाड़ा शहर से आनंद सागर झील सिर्फ 3 किमी की दूरी पर है। टैक्सी, ऑटो या अपनी गाड़ी से पहुंच सकते हैं।
+                नजदीकी स्टेशन रतलाम और एयरपोर्ट उदयपुर है।</p>
+        </div>
+
+        <!-- English Content -->
+        <div id="english" class="content active">
+            <p>Anand Sagar Lake is a popular tourist attraction in Banswara, Rajasthan. Also known as 'Bai Talab', it
+                features beautiful cenotaphs and towers around the lake.</p>
+            <h2>How to Reach</h2>
+            <p>The lake is 3 km from Banswara city. You can reach by taxi, auto, or private vehicle. Nearest railway
+                station is Ratlam; nearest airport is Udaipur.</p>
+        </div>
+
+        <!-- Static Image Section -->
+        <div class="images">
+            <img src="anand-sagar-lake.jpg" alt="Anand Sagar Lake 1">
+            <img src="anand-sagar-lake 2.jpg" alt="Anand Sagar Lake 2">
+            <img src="anand-sagar-lake3.jpg" alt="Anand Sagar Lake 3">
+            <img src="anand-sagar-lake 4.jpg" alt="Anand Sagar Lake 4">
+            <img src=" dialab-is-popular-pond.jpg" alt="Anand Sagar Lake 4">
+            <img src=" photo-91-121556-1.jpg" alt="Anand Sagar Lake 5">
+
+        </div>
+
+        <!-- Map -->
+        <h2>📍 Location Map</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.707411028618!2d74.44640687481529!3d23.6884791787119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967097d6d0b9c41%3A0x3af979861d3b469e!2sAnand%20Sagar%20Lake!5e0!3m2!1sen!2sin!4v1721557449312!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy">
+        </iframe>
+
+        <!-- Share Button -->
+        <div class="share">
+            <button class="share-btn" onclick="shareWhatsApp()">📤 Share on WhatsApp</button>
+        </div>
+
+        <!-- Review Form -->
+        <h2>💬 Visitor Review</h2>
+        <form onsubmit="event.preventDefault(); alert('Thank you for your review!'); this.reset();">
+            <input type="text" placeholder="Your Name" required />
+            <textarea rows="4" placeholder="Your review about Anand Sagar Lake..." required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.getElementById('hindi').classList.remove('active');
+            document.getElementById('english').classList.remove('active');
+            document.getElementById(lang).classList.add('active');
+        }
+
+        function shareWhatsApp() {
+            const text = "Visit Anand Sagar Lake in Banswara, Rajasthan! A peaceful tourist place worth exploring.\nhttps://your-website-link.com";
+            const url = "https://wa.me/?text=" + encodeURIComponent(text);
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+
+</html>

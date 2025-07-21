@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdulla Pir Dargah - Banswara</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #fff9f0, #ffe5ec);
+            padding: 20px;
+        }
+
+        .card {
+            max-width: 900px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            color: #7b2cbf;
+            margin-bottom: 20px;
+        }
+
+        .lang-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .lang-buttons button,
+        .share-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #7b2cbf;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .lang-buttons button:hover,
+        .share-btn:hover {
+            background: #a061d1;
+        }
+
+        .content {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            color: #333;
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .images img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: zoom-in;
+        }
+
+        .images img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        form button {
+            background: #22c55e;
+        }
+
+        form button:hover {
+            background: #16a34a;
+        }
+
+        .share {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 600px) {
+            .lang-buttons {
+                flex-direction: column;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Abdulla Pir Dargah - Banswara</h1>
+
+        <!-- Language Buttons -->
+        <div class="lang-buttons">
+            <button onclick="switchLang('hindi')">हिन्दी</button>
+            <button onclick="switchLang('english')">English</button>
+        </div>
+
+        <!-- Hindi Content -->
+        <div id="hindi" class="content">
+            <p>अब्दुल्ला पीर दरगाह बांसवाड़ा में स्थित एक पवित्र मुस्लिम तीर्थ स्थल है। यह दरगाह एक प्रसिद्ध सूफी संत
+                हज़रत अब्दुल्ला पीर को समर्पित है, जो गुजरात से आए थे। हर साल यहां उर्स का आयोजन होता है जिसमें दूर-दूर
+                से श्रद्धालु आते हैं।</p>
+            <h2>कैसे पहुंचें</h2>
+            <p>बांसवाड़ा शहर से दरगाह लगभग 2 किमी की दूरी पर है। टैक्सी या ऑटो से आसानी से पहुंचा जा सकता है।</p>
+        </div>
+
+        <!-- English Content -->
+        <div id="english" class="content active">
+            <p>Abdulla Pir Dargah is a revered Muslim shrine located in Banswara, Rajasthan. It is dedicated to the Sufi
+                saint Hazrat Abdulla Pir, who came from Gujarat. A large annual Urs festival is held here, attracting
+                devotees from across the region.</p>
+            <h2>How to Reach</h2>
+            <p>The dargah is around 2 km from Banswara city. One can easily reach by auto-rickshaw or taxi.</p>
+        </div>
+
+        <!-- Static Image Section -->
+        <div class="images">
+            <img src="293_abdulla-pir-dargah1.jpg" alt="Abdulla Pir Dargah 1">
+            <img src="504_abdulla-pir-dargah2.jpg" alt="Abdulla Pir Dargah 2">
+            <img src="883_Abdullah-Pir-in-Banswara.jpg" alt="Abdulla Pir Dargah 3">
+            <img src="maxresdefault (1).jpg" alt="Abdulla Pir Dargah 4">
+        </div>
+
+        <!-- Map -->
+        <h2>📍 Location Map</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.741980904823!2d74.44123497481529!3d23.68731837871204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396709617d53a9cf%3A0x6caa76fa66b1728f!2sAbdulla%20Pir%20Dargah!5e0!3m2!1sen!2sin!4v1721562342342!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy">
+        </iframe>
+
+        <!-- Share Button -->
+        <div class="share">
+            <button class="share-btn" onclick="shareWhatsApp()">📤 Share on WhatsApp</button>
+        </div>
+
+        <!-- Review Form -->
+        <h2>💬 Visitor Review</h2>
+        <form onsubmit="event.preventDefault(); alert('Thank you for your review!'); this.reset();">
+            <input type="text" placeholder="Your Name" required />
+            <textarea rows="4" placeholder="Your review about Abdulla Pir Dargah..." required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.getElementById('hindi').classList.remove('active');
+            document.getElementById('english').classList.remove('active');
+            document.getElementById(lang).classList.add('active');
+        }
+
+        function shareWhatsApp() {
+            const text = "Visit Abdulla Pir Dargah in Banswara, Rajasthan — a spiritual site of peace and devotion.\nhttps://your-website-link.com";
+            const url = "https://wa.me/?text=" + encodeURIComponent(text);
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+
+</html>

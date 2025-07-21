@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="pageTitle">Explore Southern Rajasthan: Banswara & Dungarpur</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="hero-content">
+            <h1 data-key="heroHeading">Discover the Charms of Banswara & Dungarpur</h1>
+            <p data-key="heroSubheading">Unveiling the Hidden Gems of Southern Rajasthan, India</p>
+            <a href="#banswara" class="btn-hero" data-key="startExploringBtn">Start Exploring</a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#banswara" class="nav-btn" onclick="showBanswara()" data-key="navBanswara">Banswara</a></li>
+            <li><a href="#dungarpur" class="nav-btn" onclick="showDungarpur()" data-key="navDungarpur">Dungarpur</a>
+            </li>
+            <li><a href="#contact" data-key="navContact">Contact Us</a></li>
+            <li class="language-switcher">
+
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="info"></div>
+
+        <section id="banswara" class="tourist-section">
+            <h2 class="section-title" data-key="banswaraSectionTitle">Banswara - The City of Hundred Islands</h2>
+            <div class="place-grid">
+                <div class="place-card">
+                    <img src="Mahi_Bajaj_Sagar_Dam.jpg" alt="Mahi Bajaj Sagar Dam">
+                    <h3 data-key="mahiDamTitle">Mahi Bajaj Sagar Dam</h3>
+                    <p data-key="mahiDamDesc">A colossal dam on the Mahi River, offering breathtaking panoramic views
+                        and serene picnic spots. It's truly a sight to behold, surrounded by picturesque small islands.
+
+
+                    </p>
+                    <a href="mahi_bajaj_sagar_dam.html" class="learn-more-btn" data-key="exploreMoreBtn">Explore
+                        More</a>
+                </div>
+                <div class="place-card">
+                    <img src="anand-sagar-lake3.jpg" alt="Anand Sagar Lake">
+                    <h3 data-key="anandSagarTitle">Anand Sagar Lake (Bai Talab)</h3>
+                    <p data-key="anandSagarDesc">A captivating artificial lake near the city, ideal for tranquil boating
+                        and enjoying magnificent sunsets. Its banks are adorned with historic cenotaphs of past rulers.
+                    </p>
+                    <a href="anand_sagar.html" class="learn-more-btn" data-key="exploreMoreBtn">Explore
+                        More</a>
+                </div>
+                <div class="place-card">
+                    <img src="Abdullah-Pir-in-Banswara.jpg" alt="Abdullah Pir Dargah">
+                    <h3 data-key="abdullahPirTitle">Abdullah Pir Dargah</h3>
+                    <p data-key="abdullahPirDesc">A revered shrine, significant for the Bohra Muslim community, known
+                        for its tranquil atmosphere and annual Urs fair attracting devotees from across the globe.</p>
+                    <a href="abdullah_pir.html" class="learn-more-btn" data-key="exploreMoreBtn">Explore
+                        More</a>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="dungarpur" class="tourist-section">
+            <h2 class="section-title" data-key="dungarpurSectionTitle">Dungarpur - The City of Hills</h2>
+            <div class="place-grid">
+                <div class="place-card">
+                    <img src="26_ind_juna_mahal.jpg" alt="Juna Mahal">
+                    <h3 data-key="junaMahalTitle">Juna Mahal</h3>
+                    <p data-key="junaMahalDesc">A 13th-century palace known for its stunning architecture, intricate
+                        frescoes, and vibrant wall paintings.</p>
+                    <button class="learn-more-btn" data-place="Juna Mahal" data-key="exploreMoreBtn">Explore
+                        More</button>
+                </div>
+                <div class="place-card">
+                    <img src="gaib-sagar-lake3.jpg" alt="Gaib Sagar Lake">
+                    <h3 data-key="gaibSagarTitle">Gaib Sagar Lake</h3>
+                    <p data-key="gaibSagarDesc">A serene lake with the famous Vijay Raj Rajeshwar Temple on its banks,
+                        perfect for peaceful walks and spiritual reflection.</p>
+                    <button class="learn-more-btn" data-place="Gaib Sagar Lake" data-key="exploreMoreBtn">Explore
+                        More</button>
+                </div>
+                <div class="place-card">
+                    <img src="deo-somnath1.jpg" alt="Deo Somnath Temple">
+                    <h3 data-key="deoSomnathTitle">Deo Somnath Temple</h3>
+                    <p data-key="deoSomnathDesc">An ancient 12th-century temple dedicated to Lord Shiva, renowned for
+                        its architectural grandeur and historical significance.</p>
+                    <button class="learn-more-btn" data-place="Deo Somnath Temple" data-key="exploreMoreBtn">Explore
+                        More</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function showBanswara() {
+            const infoDiv = document.getElementById('info');
+            infoDiv.innerHTML = `
+                <h2>Banswara Tourist Places</h2>
+                <p><strong>Mahi Bajaj Sagar Dam:</strong> A colossal dam on the Mahi River, offering breathtaking panoramic views and serene picnic spots. It's truly a sight to behold, surrounded by picturesque small islands.</p>
+                <p><strong>Anand Sagar Lake (Bai Talab):</strong> A captivating artificial lake near the city, ideal for tranquil boating and enjoying magnificent sunsets. Its banks are adorned with historic cenotaphs of past rulers.</p>
+                <p><strong>Abdullah Pir Dargah:</strong> A revered shrine, significant for the Bohra Muslim community, known for its tranquil atmosphere and annual Urs fair attracting devotees from across the globe.</p>
+                <p><strong>Tripura Sundari Temple:</strong> A famous temple dedicated to Goddess Tripura Sundari, known for its spiritual significance and architectural beauty.</p>
+            `;
+            infoDiv.classList.add('active');
+        }
+
+        function showDungarpur() {
+            const infoDiv = document.getElementById('info');
+            infoDiv.innerHTML = `
+                <h2>Dungarpur Tourist Places</h2>
+                <p><strong>Juna Mahal:</strong> A 13th-century palace known for its stunning architecture, intricate frescoes, and vibrant wall paintings.</p>
+                <p><strong>Gaib Sagar Lake:</strong> A serene lake with the famous Vijay Raj Rajeshwar Temple on its banks, perfect for peaceful walks and spiritual reflection.</p>
+                <p><strong>Deo Somnath Temple:</strong> An ancient 12th-century temple dedicated to Lord Shiva, renowned for its architectural grandeur and historical significance.</p>
+                <p><strong>Beneshwar Temple:</strong> A significant religious site located at the confluence of Mahi and Som rivers, known for its vibrant fairs.</p>
+            `;
+            infoDiv.classList.add('active');
+        }
+
+        document.getElementById('lang-en').addEventListener('click', () => {
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('lang-en').classList.add('active');
+        });
+
+        document.getElementById('lang-hi').addEventListener('click', () => {
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('lang-hi').classList.add('active');
+        });
+    </script>
+</body>
+
+</html>

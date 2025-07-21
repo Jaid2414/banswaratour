@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>माही बजाज सागर बांध</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function changeLanguage(lang) {
+            const hindiContent = {
+                title: "माही बजाज सागर बांध",
+                aboutTitle: "माही बजाज सागर बांध के बारे में",
+                aboutText1: "माही बजाज सागर बांध राजस्थान के बांसवाड़ा जिले में माही नदी पर स्थित एक प्रमुख बांध है। यह बांध बांसवाड़ा शहर से 16 किलोमीटर की दूरी पर बोर्खेड़ा गाँव में बनाया गया है। इसका निर्माण 1972 से 1983 के बीच जलविद्युत उत्पादन और जल आपूर्ति के उद्देश्य से किया गया था। यह राजस्थान का सबसे लंबा और दूसरा सबसे बड़ा बांध है, जिसकी स्थापित क्षमता 140 मेगावाट है। इस बांध का नाम प्रसिद्ध स्वतंत्रता सेनानी और राष्ट्रीय नेता श्री जमनालाल बजाज के नाम पर रखा गया है।",
+                aboutText2: "माही नदी मध्य प्रदेश के धार जिले के सरदारपुरा गाँव से निकलती है और राजस्थान के वागड़ क्षेत्र से होकर गुजरात में प्रवेश करती है, जहाँ यह खंभात की खाड़ी में मिलती है। माही नदी को इसकी विशालता के कारण 'माही सागर' भी कहा जाता है। यह बांध बांसवाड़ा, डूंगरपुर, और आसपास के क्षेत्रों में सिंचाई और बिजली उत्पादन के लिए महत्वपूर्ण है। यह परियोजना राजस्थान और गुजरात के बीच एक अंतर-राज्यीय परियोजना है, जिसमें राजस्थान की हिस्सेदारी 45% और गुजरात की 55% है, लेकिन बिजली का 100% हिस्सा राजस्थान को मिलता है।",
+                aboutText3: "माही बजाज सागर बांध के जलग्रहण क्षेत्र में कई छोटे-छोटे द्वीप हैं, जिसके कारण बांसवाड़ा को 'सौ द्वीपों का शहर' भी कहा जाता है। यह बांध न केवल उपयोगिता के लिए बल्कि अपनी प्राकृतिक सुंदरता के लिए भी प्रसिद्ध है, जो इसे एक लोकप्रिय पर्यटक स्थल बनाता है। यहाँ मगरमच्छ और कछुओं की भी अच्छी संख्या पाई जाती है।",
+                galleryTitle: "तस्वीरें",
+                imageCaption1: "माही बजाज सागर बांध का मनोरम दृश्य",
+                imageCaption2: "माही नदी का प्रवाह",
+                imageCaption3: "जलग्रहण क्षेत्र के द्वीप",
+                imageCaption4: "बांध का पावर हाउस",
+                footer: "© 2025 माही बजाज सागर बांध। सभी अधिकार सुरक्षित।"
+            };
+            const englishContent = {
+                title: "Mahi Bajaj Sagar Dam",
+                aboutTitle: "About Mahi Bajaj Sagar Dam",
+                aboutText1: "Mahi Bajaj Sagar Dam is a prominent dam located on the Mahi River in the Banswara district of Rajasthan. Situated in Borkheda village, 16 kilometers from Banswara city, it was constructed between 1972 and 1983 for hydropower generation and water supply. It is the longest and second-largest dam in Rajasthan, with an installed capacity of 140 MW. The dam is named after the renowned freedom fighter and national leader, Shri Jamnalal Bajaj.",
+                aboutText2: "The Mahi River originates in Sardarpura village, Dhar district, Madhya Pradesh, and flows through the Vagad region of Rajasthan before entering Gujarat, where it meets the Gulf of Khambhat. Due to its vastness, the Mahi River is also called 'Mahi Sagar.' The dam is crucial for irrigation and power generation in Banswara, Dungarpur, and surrounding areas. It is an inter-state project between Rajasthan and Gujarat, with Rajasthan holding a 45% share and Gujarat 55%, although Rajasthan receives 100% of the generated power.",
+                aboutText3: "The reservoir of Mahi Bajaj Sagar Dam features numerous small islands, earning Banswara the nickname 'City of Hundred Islands.' Beyond its utility, the dam is renowned for its natural beauty, making it a popular tourist destination. It also supports a significant population of crocodiles and turtles.",
+                galleryTitle: "Gallery",
+                imageCaption1: "Scenic view of Mahi Bajaj Sagar Dam",
+                imageCaption2: "Flow of the Mahi River",
+                imageCaption3: "Islands in the reservoir",
+                imageCaption4: "Dam's powerhouse",
+                footer: "© 2025 Mahi Bajaj Sagar Dam. All rights reserved."
+            };
+
+            const content = lang === 'hi' ? hindiContent : englishContent;
+
+            document.title = content.title;
+            document.querySelector('h1').textContent = content.title;
+            document.querySelector('#about-title').textContent = content.aboutTitle;
+            document.querySelector('#about-text1').textContent = content.aboutText1;
+            document.querySelector('#about-text2').textContent = content.aboutText2;
+            document.querySelector('#about-text3').textContent = content.aboutText3;
+            document.querySelector('#gallery-title').textContent = content.galleryTitle;
+            document.querySelector('#caption1').textContent = content.imageCaption1;
+            document.querySelector('#caption2').textContent = content.imageCaption2;
+            document.querySelector('#caption3').textContent = content.imageCaption3;
+            document.querySelector('#caption4').textContent = content.imageCaption4;
+            document.querySelector('footer p').textContent = content.footer;
+
+            document.documentElement.lang = lang;
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <header class="bg-blue-600 text-white py-6">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-4xl font-bold">माही बजाज सागर बांध</h1>
+            <select onchange="changeLanguage(this.value)" class="bg-white text-black p-2 rounded">
+                <option value="hi">हिंदी</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 id="about-title" class="text-2xl font-semibold mb-4">माही बजाज सागर बांध के बारे में</h2>
+            <p id="about-text1" class="text-gray-700 mb-4">
+                माही बजाज सागर बांध राजस्थान के बांसवाड़ा जिले में माही नदी पर स्थित एक प्रमुख बांध है। यह बांध
+                बांसवाड़ा शहर से 16 किलोमीटर की दूरी पर बोर्खेड़ा गाँव में बनाया गया है। इसका निर्माण 1972 से 1983 के
+                बीच जलविद्युत उत्पादन और जल आपूर्ति के उद्देश्य से किया गया था। यह राजस्थान का सबसे लंबा और दूसरा सबसे
+                बड़ा बांध है, जिसकी स्थापित क्षमता 140 मेगावाट है। इस बांध का नाम प्रसिद्ध स्वतंत्रता सेनानी और
+                राष्ट्रीय नेता श्री जमनालाल बजाज के नाम पर रखा गया है।
+            </p>
+            <p id="about-text2" class="text-gray-700 mb-4">
+                माही नदी मध्य प्रदेश के धार जिले के सरदारपुरा गाँव से निकलती है और राजस्थान के वागड़ क्षेत्र से होकर
+                गुजरात में प्रवेश करती है, जहाँ यह खंभात की खाड़ी में मिलती है। माही नदी को इसकी विशालता के कारण 'माही
+                सागर' भी कहा जाता है। यह बांध बांसवाड़ा, डूंगरपुर, और आसपास के क्षेत्रों में सिंचाई और बिजली उत्पादन के
+                लिए महत्वपूर्ण है। यह परियोजना राजस्थान और गुजरात के बीच एक अंतर-राज्यीय परियोजना है, जिसमें राजस्थान की
+                हिस्सेदारी 45% और गुजरात की 55% है, लेकिन बिजली का 100% हिस्सा राजस्थान को मिलता है।
+            </p>
+            <p id="about-text3" class="text-gray-700 mb-4">
+                माही बजाज सागर बांध के जलग्रहण क्षेत्र में कई छोटे-छोटे द्वीप हैं, जिसके कारण बांसवाड़ा को 'सौ द्वीपों
+                का शहर' भी कहा जाता है। यह बांध न केवल उपयोगिता के लिए बल्कि अपनी प्राकृतिक सुंदरता के लिए भी प्रसिद्ध
+                है, जो इसे एक लोकप्रिय पर्यटक स्थल बनाता है। यहाँ मगरमच्छ और कछुओं की भी अच्छी संख्या पाई जाती है।
+            </p>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-lg p-6">
+            <h2 id="gallery-title" class="text-2xl font-semibold mb-4">तस्वीरें</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <img src="maxresdefault.jpg" alt="माही बजाज सागर बांध का दृश्य" class="w-full h-auto rounded-lg">
+                    <p id="caption1" class="text-center text-gray-600 mt-2">माही बजाज सागर बांध का मनोरम दृश्य</p>
+                </div>
+                <div>
+                    <img src="mahi river.jpg" alt="माही नदी" class="w-full h-auto rounded-lg">
+                    <p id="caption2" class="text-center text-gray-600 mt-2">माही नदी का प्रवाह</p>
+                </div>
+                <div>
+                    <img src="Banswara-1024x536.jpg" alt="बांध के द्वीप" class="w-full h-auto rounded-lg">
+                    <p id="caption3" class="text-center text-gray-600 mt-2">जलग्रहण क्षेत्र के द्वीप</p>
+                </div>
+                <div>
+                    <img src="mahipower plant.jpg" alt="बांध का पावर हाउस" class="w-full h-auto rounded-lg">
+                    <p id="caption4" class="text-center text-gray-600 mt-2">बांध का पावर हाउस</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-600 text-white py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 माही बजाज सागर बांध। सभी अधिकार सुरक्षित।</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hindi text styling */
+[lang="hi"] {
+    font-family: 'Noto Serif Devanagari', serif;
+}
+
+/* Header Styling with Background Animation */
+header {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    animation: backgroundSlide 10s infinite;
+}
+
+@keyframes backgroundSlide {
+    0% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x400/FFDDC1/333333?text=Banswara');
+    }
+
+    50% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x400/FFDDC1/333333?text=Dungarpur');
+    }
+
+    100% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x400/FFDDC1/333333?text=Banswara');
+    }
+}
+
+.hero-content {
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn-hero {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-hero:hover {
+    background: #0056b3;
+}
+
+/* Navigation Styling */
+nav {
+    background: #f4f4f4;
+    padding: 15px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 10px 20px;
+}
+
+.nav-btn,
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-btn:hover,
+nav ul li a:hover {
+    color: #007bff;
+}
+
+.language-switcher select {
+    padding: 8px 15px;
+    border: none;
+    background: #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    transition: background 0.3s;
+}
+
+.language-switcher select:focus {
+    background: #007bff;
+    color: #fff;
+}
+
+/* Info Section Styling */
+#info {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    text-align: left;
+}
+
+#info.active {
+    display: block;
+}
+
+#info h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+#info p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Tourist Section Styling */
+.tourist-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.place-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.place-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    width: 400px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    transition: transform 0.3s;
+    overflow: hidden;
+}
+
+.place-card:hover {
+    transform: translateY(-5px);
+}
+
+.place-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.place-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    padding: 15px;
+    color: #333;
+}
+
+.place-card p {
+    padding: 0 15px 15px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.learn-more-btn {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0 0 8px 8px;
+    transition: background 0.3s;
+}
+
+.learn-more-btn:hover {
+    background: #0056b3;
+}
+
+hr {
+    max-width: 800px;
+    margin: 40px auto;
+    border: 1px solid #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .btn-hero {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .language-switcher select {
+        width: 100%;
+        max-width: 200px;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .place-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .place-card img {
+        height: 150px;
+    }
+
+    #info {
+        padding: 15px;
+    }
+
+    #info h2 {
+        font-size: 1.5rem;
+    }
+
+    #info p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .btn-hero {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .place-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .place-card p {
+        font-size: 0.9rem;
+    }
+
+    .language-switcher select {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+}
