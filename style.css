@@ -1,317 +1,154 @@
-/* Reset default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Reset & base styles */
 body {
-    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #f5f5f5;
     color: #333;
-    line-height: 1.6;
 }
 
-/* Hindi text styling */
-[lang="hi"] {
-    font-family: 'Noto Serif Devanagari', serif;
-}
-
-/* Header Styling with Background Animation */
 header {
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(to right, #5c6bc0, #8e24aa);
+    color: white;
     text-align: center;
-    color: #fff;
-    background-size: cover;
-    background-position: center;
-    animation: backgroundSlide 10s infinite;
-}
-
-@keyframes backgroundSlide {
-    0% {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x400/FFDDC1/333333?text=Banswara');
-    }
-
-    50% {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x400/FFDDC1/333333?text=Dungarpur');
-    }
-
-    100% {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x400/FFDDC1/333333?text=Banswara');
-    }
-}
-
-.hero-content {
-    padding: 20px;
+    padding: 80px 20px;
+    position: relative;
 }
 
 .hero-content h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 10px;
+    animation: fadeInDown 1s ease-in-out;
 }
 
 .hero-content p {
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    opacity: 0.9;
 }
 
 .btn-hero {
     display: inline-block;
-    padding: 10px 20px;
-    background: #007bff;
-    color: #fff;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: white;
+    color: #5c6bc0;
+    border-radius: 25px;
     text-decoration: none;
-    border-radius: 5px;
+    font-weight: bold;
     transition: background 0.3s;
 }
 
 .btn-hero:hover {
-    background: #0056b3;
+    background: #eee;
 }
 
-/* Navigation Styling */
-nav {
-    background: #f4f4f4;
-    padding: 15px 0;
-}
-
+/* Nav */
 nav ul {
     display: flex;
     justify-content: center;
-    align-items: center;
+    background: #333;
+    padding: 10px;
     list-style: none;
-    flex-wrap: wrap;
+    margin: 0;
 }
 
-nav ul li {
-    margin: 10px 20px;
+nav li {
+    margin: 0 15px;
 }
 
-.nav-btn,
-nav ul li a {
+nav a {
+    color: white;
     text-decoration: none;
-    color: #333;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     transition: color 0.3s;
 }
 
-.nav-btn:hover,
-nav ul li a:hover {
-    color: #007bff;
+nav a:hover {
+    color: #ffcc80;
 }
 
-.language-switcher select {
-    padding: 8px 15px;
-    border: none;
-    background: #ddd;
-    cursor: pointer;
-    border-radius: 5px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    color: #333;
-    outline: none;
-    transition: background 0.3s;
-}
-
-.language-switcher select:focus {
-    background: #007bff;
-    color: #fff;
-}
-
-/* Info Section Styling */
-#info {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: none;
-    text-align: left;
-}
-
-#info.active {
-    display: block;
-}
-
-#info h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #007bff;
-}
-
-#info p {
-    margin-bottom: 10px;
-    font-size: 1rem;
-}
-
-/* Tourist Section Styling */
-.tourist-section {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-.section-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 30px;
-    color: #333;
-}
-
+/* Grid layout */
 .place-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
+    padding: 30px;
 }
 
+/* Cards */
 .place-card {
-    background: #fff;
-    border-radius: 8px;
-    padding: 16px;
-    width: 400px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    flex-direction: column;
-    display: flex;
-    justify-content: space-between;
-    transition: transform 0.3s;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     overflow: hidden;
+    transition: transform 0.3s;
 }
 
 .place-card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.02);
 }
 
 .place-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.place-card img:hover {
+    transform: scale(1.05);
 }
 
 .place-card h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    padding: 15px;
+    margin: 16px;
+    font-size: 1.4rem;
     color: #333;
 }
 
 .place-card p {
-    padding: 0 15px 15px;
-    font-size: 1rem;
+    margin: 0 16px 16px;
+    font-size: 0.95rem;
     color: #666;
 }
 
 .learn-more-btn {
-    display: block;
-    text-align: center;
-    padding: 10px;
-    background: #007bff;
-    color: #fff;
+    display: inline-block;
+    margin: 0 16px 16px;
+    padding: 10px 16px;
+    background: #5c6bc0;
+    color: white;
+    border: none;
+    border-radius: 8px;
     text-decoration: none;
-    border-radius: 0 0 8px 8px;
-    transition: background 0.3s;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .learn-more-btn:hover {
-    background: #0056b3;
+    background: #3949ab;
 }
 
-hr {
-    max-width: 800px;
-    margin: 40px auto;
-    border: 1px solid #ddd;
+/* Info Box */
+#info {
+    background: #fffbe6;
+    padding: 20px;
+    margin: 20px;
+    border-left: 5px solid #ffa726;
+    font-size: 1rem;
+    display: none;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .btn-hero {
-        padding: 8px 15px;
-        font-size: 0.9rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .language-switcher select {
-        width: 100%;
-        max-width: 200px;
-        padding: 10px;
-        font-size: 0.9rem;
-    }
-
-    .section-title {
-        font-size: 1.5rem;
-    }
-
-    .place-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .place-card img {
-        height: 150px;
-    }
-
-    #info {
-        padding: 15px;
-    }
-
-    #info h2 {
-        font-size: 1.5rem;
-    }
-
-    #info p {
-        font-size: 0.9rem;
-    }
+#info.active {
+    display: block;
 }
 
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 1.5rem;
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
     }
-
-    .hero-content p {
-        font-size: 0.9rem;
-    }
-
-    .btn-hero {
-        padding: 6px 12px;
-        font-size: 0.8rem;
-    }
-
-    .section-title {
-        font-size: 1.3rem;
-    }
-
-    .place-card h3 {
-        font-size: 1.2rem;
-    }
-
-    .place-card p {
-        font-size: 0.9rem;
-    }
-
-    .language-switcher select {
-        font-size: 0.8rem;
-        padding: 8px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
